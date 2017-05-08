@@ -1,5 +1,5 @@
 # Ce fichier abrite le code du ZCasino, un jeu de roulette adapté
-
+# On va voir si ça marche ou pas !!!!!!
 import os
 from random import randrange
 from math import ceil
