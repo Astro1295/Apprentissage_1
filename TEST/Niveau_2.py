@@ -32,3 +32,6 @@ for x,y in user_info.items():
     ecrire= fichier.write("{0}:{1}.\n" .format(x,y))
 fichier.close()
 
+fichier = open("path", "r")
+source = fichier.read()
+print(source)
