@@ -35,3 +35,7 @@ fichier.close()
 fichier = open("path", "r")
 source = fichier.read()
 print(source)
+
+mot = "bonjour"
+if "b" in mot:
+    print("youpi")
