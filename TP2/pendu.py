@@ -1,9 +1,11 @@
 # la fonction de pendu
 from Fonction import Fonctions
 
-Fonctions.demande_nom()
-Fonctions.demande_lettre()
-print("C'est parti la roulette tourne !!!!")
-lettre = input("Choisissez une lettre !")
+nom = Fonctions.demande_nom()
 
-Fonctions.recherche_mot_liste(lettre)
+
+print("\n")
+print("C'est parti la roulette tourne !!!!")
+print("\n")
+
+Fonctions.recherche_mot_liste()

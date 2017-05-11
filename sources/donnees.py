@@ -6,7 +6,7 @@ fichier_score = "scores"
 
 # nombre de coups
 
-nb_coups = 8
+nb_coups = 6
 scores_user = 0
 
 # liste des mots

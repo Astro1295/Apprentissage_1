@@ -33,16 +33,26 @@ def recherche_lettre(mot, lettre):
     else:
         print("\n ** La lettre n'est pas présente dans notre mot **!!\n ")
 
-def recherche_mot_liste(lettre):
-    lettre = str(lettre).lower()
+def recherche_mot_liste():
+    choix = choice(donnees.mon_mot)
     coups_user = donnees.nb_coups
+    mot=""
 # vérification si la lettre est dans le mot
-    if recherche_lettre(choice(donnees.mon_mot), lettre):
-        print("\n Bravo la lettre est dans le mot choisi !!")
-        donnees.scores_user+=1
-    else:
-        coups_user-=1
-        print("\n Essayes une seconde fois ! il te reste que ", coups_user, "à jouer !!")
+    while coups_user > 0:
+        lettre = demande_lettre()
+        lettre = str(lettre).lower()
+
+        if recherche_lettre(choix, lettre):
+            print("\n Bravo la lettre est dans le mot choisi !!")
+            mot = ajouter_lettre(mot,lettre)
+            print(mot)
+            coups_user -=1
+
+        else:
+            mot = ajouter_etoile(mot)
+            print(mot)
+            coups_user-=1
+            print("\n Essayes une autre fois ! il te reste que ", coups_user, "à jouer !!")
 
 def demande_nom():
     nom = input("\n C'est quoi votre nom ? \n")
@@ -61,4 +71,11 @@ def demande_lettre():
     else:
         return lettre
 
+def ajouter_etoile(mot):
+    mot = str(mot) + "*"
+    return mot
+
+def ajouter_lettre(mot,lettre):
+    mot = str(mot) + str(lettre)
+    return mot
 
