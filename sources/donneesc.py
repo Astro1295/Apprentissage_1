@@ -30,3 +30,9 @@ liste_mots = [
     "vampire",
     "volant",
 ]
+
+
+ma_liste = [1, 2, 4, 8, 16, 32, 64,12,11,5,4]
+ma_liste = [n for n in ma_liste if n < 16]
+print(ma_liste)
+
